@@ -1,0 +1,41 @@
+import datetime
+
+def estimate_time_to_level(current_level, target_level, target_date):
+    hours_per_level = {
+        'A1': 200,
+        'A2': 600,
+        'B1': 1200,
+        'B2': 2500,
+        'C1': 5000,
+        'C2': 10000
+    }
+    print(f'current_level: {current_level}, target_level: {target_level}, target_date: {target_date}')
+    hours_required = hours_per_level[target_level] - hours_per_level[current_level]
+    print(f'hours_required: {hours_required}')
+    weeks_required = hours_required / 6
+    print(f'weeks_required: {weeks_required}')
+    target_date = datetime.datetime.strptime(target_date, '%Y-%m-%d')
+    current_date = datetime.datetime.now()
+    print(f'target_date: {target_date}, current_date: {current_date}')
+    days_required = (target_date - current_date).days
+    print(f'days_required: {days_required}')
+    years_required = days_required / 365
+    print(f'years_required: {years_required}')
+    return weeks_required / years_required / 5
+
+def main():
+    target_level = input('What level of language do you want to achieve? ')
+    current_level = input('What level of language are you at? ')
+    target_date = input('When do you want to achieve the desired level (YYYY-MM-DD)? ')
+    
+    hours_per_day = estimate_time_to_level(current_level, target_level, target_date)
+    if hours_per_day > 6:
+        print('This is not a realistic goal.')
+    else:
+        print(f'You should study for {hours_per_day:.1f} hours per day to reach your goal by {target_date}.')
+        print('Here is a suggested schedule:')
+        print('- Monday to Friday:', hours_per_day, 'hours per day')
+        print('- Saturday: 8 hours')
+        print('- Sunday: day off')
+
+    
