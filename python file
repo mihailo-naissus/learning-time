@@ -38,4 +38,11 @@ def main():
         print('- Saturday: 8 hours')
         print('- Sunday: day off')
 
-    
+//This code defines a function estimate_time_to_level that takes as input a current language level,
+a target language level, and a target date and returns an estimate of the number of hours per day
+the user should study in order to reach the target level by the target date. The function first
+determines the number of hours required to reach the target level by using the dictionary hours_per_level,
+which maps language levels to the number of hours required to reach them. The function then calculates the number of weeks,
+days, and years required to reach the target level based on the current date, target date,
+and number of hours required. Finally, the function returns the number of hours per day the user
+should study as the number of weeks required divided by the number of years required and divided by 5 (since there are 5 weekdays).//    
