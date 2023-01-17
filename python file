@@ -24,6 +24,7 @@ def estimate_time_to_level(current_level, target_level, target_date):
     return weeks_required / years_required / 5
 
 def main():
+
     target_level = input('What level of language do you want to achieve? ')
     current_level = input('What level of language are you at? ')
     target_date = input('When do you want to achieve the desired level (YYYY-MM-DD)? ')
@@ -32,6 +33,7 @@ def main():
     if hours_per_day > 6:
         print('This is not a realistic goal.')
     else:
+    
         print(f'You should study for {hours_per_day:.1f} hours per day to reach your goal by {target_date}.')
         print('Here is a suggested schedule:')
         print('- Monday to Friday:', hours_per_day, 'hours per day')
@@ -40,6 +42,7 @@ def main():
 
 //This code defines a function estimate_time_to_level that takes as input a current language level,
 a target language level, and a target date and returns an estimate of the number of hours per day
+
 the user should study in order to reach the target level by the target date. The function first
 determines the number of hours required to reach the target level by using the dictionary hours_per_level,
 which maps language levels to the number of hours required to reach them. The function then calculates the number of weeks,
