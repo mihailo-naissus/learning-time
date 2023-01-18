@@ -9,6 +9,9 @@ def estimate_time_to_level(current_level, target_level, target_date):
         'C1': 5000,
         'C2': 10000
     }
+    
+    
+    
     print(f'current_level: {current_level}, target_level: {target_level}, target_date: {target_date}')
     hours_required = hours_per_level[target_level] - hours_per_level[current_level]
     print(f'hours_required: {hours_required}')
@@ -24,7 +27,6 @@ def estimate_time_to_level(current_level, target_level, target_date):
     return weeks_required / years_required / 5
 
 def main():
-
     target_level = input('What level of language do you want to achieve? ')
     current_level = input('What level of language are you at? ')
     target_date = input('When do you want to achieve the desired level (YYYY-MM-DD)? ')
@@ -33,7 +35,6 @@ def main():
     if hours_per_day > 6:
         print('This is not a realistic goal.')
     else:
-    
         print(f'You should study for {hours_per_day:.1f} hours per day to reach your goal by {target_date}.')
         print('Here is a suggested schedule:')
         print('- Monday to Friday:', hours_per_day, 'hours per day')
