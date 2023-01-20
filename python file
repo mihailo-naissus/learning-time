@@ -2,6 +2,8 @@ import datetime
 
 def estimate_time_to_level(current_level, target_level, target_date):
     hours_per_level = {
+    
+    
         'A1': 200,
         'A2': 600,
         'B1': 1200,
@@ -25,6 +27,8 @@ def estimate_time_to_level(current_level, target_level, target_date):
     years_required = days_required / 365
     print(f'years_required: {years_required}')
     return weeks_required / years_required / 5
+
+
 
 def main():
     target_level = input('What level of language do you want to achieve? ')
