@@ -12,7 +12,6 @@ def estimate_time_to_level(current_level, target_level, target_date):
         'C2': 10000
     }
     
-
     print(f'current_level: {current_level}, target_level: {target_level}, target_date: {target_date}')
     hours_required = hours_per_level[target_level] - hours_per_level[current_level]
     print(f'hours_required: {hours_required}')
