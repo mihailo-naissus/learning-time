@@ -3,7 +3,6 @@ import datetime
 def estimate_time_to_level(current_level, target_level, target_date):
     hours_per_level = {
     
-    
         'A1': 200,
         'A2': 600,
         'B1': 1200,
