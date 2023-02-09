@@ -2,7 +2,6 @@ Language Learning Scheduler
 
 
 This program helps language learners plan their study schedule by estimating the number of hours per day they need to study in order to reach a target language level by a given date. The program uses the Common European Framework of Reference for Languages (CEFR) to determine the number of hours required to reach each level.
-
 How to Use
 To use the program, enter the following command in your terminal:
 python scheduler.py
